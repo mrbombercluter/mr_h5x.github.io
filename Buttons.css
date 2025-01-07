@@ -1,0 +1,193 @@
+/* Body Styles */
+body {
+  background-color: #6c5ce7;
+  background-image: linear-gradient(135deg, rgba(108, 92, 231, 0.8), rgba(41, 128, 185, 0.8));
+  color: #F0FF;
+  font-family: 'Arial', sans-serif;
+  margin: 5px;
+  padding: 0;
+  height: 102vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+#tyrone-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  transition: background-image 0.3s ease;
+  padding: 20px;
+}
+
+/* Main Button Styles */
+#tyrone-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 60px;
+  background-color: #4c3095;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+
+#tyrone-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+#tyrone-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tyrone-button::before {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+/* Fatality Buttons */
+#fatality-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+#fatality-buttons a {
+  width: 200px;
+  font-size: 1em;
+  margin: 10px;
+  padding: 10px;
+  background-color: #5b3f8d;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+
+#fatality-buttons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+#fatality-buttons a:active {
+  transform: translateY(0);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* New Buttons Section - Discord and NFA Buttons */
+#discord-nfa-buttons {
+  margin-top: 50px; /* Push the Discord buttons section lower */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center align the buttons horizontally */
+  justify-content: center; /* Ensure the buttons are centered vertically within the container */
+  width: 100%; /* Full width for symmetry */
+  gap: 20px; /* Add space between buttons for uniform spacing */
+}
+
+#discord-button, #cheap-nfa-button {
+  width: 200px; /* Set both buttons to the same width for symmetry */
+  padding: 15px; /* Add padding for larger buttons */
+  background-color: #f1c40f; /* Yellow background */
+  color: #e74c3c; /* Red text color */
+  font-size: 1.2em; /* Larger text size for better readability */
+  font-weight: bold;
+  border-radius: 3900px;
+  text-align: center;
+  text-decoration: solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Make sure padding doesn't mess with the button width */
+}
+
+#discord-button:hover, #cheap-nfa-button:hover {
+  background-color: #f39c12; /* Darker Yellow */
+  color: #c0392b; /* Darker Red */
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#discord-button:active, #cheap-nfa-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Input Box for Background Change */
+input[type="text"] {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #5b3f8d;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #tyrone-container {
+    width: 95%;
+    height: auto;
+  }
+
+  #tyrone-button, #discord-button, #cheap-nfa-button {
+    width: 10%;
+  }
+
+  #fatality-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #fatality-buttons a {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #tyrone-button, #discord-button, #cheap-nfa-button {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  #fatality-buttons a {
+    width: 100%;
+    font-size: 0.9em;
+  }
+}
